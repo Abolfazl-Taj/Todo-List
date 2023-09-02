@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    @apply flex justify-center items-center bg-[#444]
+}
+.countiner {
+    box-shadow: inset 1px 1px 10px 1px #444 ,
+    1px 1px 10px 1px #111;
+    @apply bg-[#111] w-[700px] text-gray-400 mt-[1rem] rounded
+}
+.header {
+   @apply text-[35px] text-center p-3 my-[1rem] mx-[10px] font-semibold 
+}
+.inputesd {
+   @apply p-3 flex justify-center items-center
+}
+.input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+     @apply w-[500px] rounded bg-[#444] text-[#111] p-3 text-[25px] font-semibold
+}
+.btn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    @apply w-[171px] text-center bg-[#444] rounded text-[#111]  p-3 ml-[1rem] text-[25px] font-semibold
+}
+.p{
+    @apply   rounded bg-[#4444] my-[1rem] p-3
+}
+.list{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-height: 300px;
+    overflow-y: scroll;
+    @apply text-justify mt-[5rem] mx-[20px] mb-[2rem] font-bold text-[18]
+}
+li{
+    position: relative;
+    transition: all 0.25s;
+    cursor:pointer;
+    user-select: none;
+    z-index: 5;
+    @apply flex items-center
+}
+
+li:hover{
+    @apply bg-stone-700
+}
+.do{
+    text-decoration:line-through 2px solid #444 ;
+    @apply bg-gray-600 
+}
+
+.close{
+    display: none;
+    position: absolute;
+    right: 0;
+    transition: all 0.25s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    @apply bg-[#a8a8a8] text-[#4d4d4d] rounded-full  text-[20px] font-black w-[30px] h-[30px] text-center mr-[8px]
+}
+.close:hover{
+    @apply text-red-600 bg-[#111]
+}
+li:hover .close{
+    display: block;
+}
+
+ .do::before{
+    content: "\002714";
+ position: absolute;
+ right : 3px ;
+ @apply bg-green-400 rounded-full text-green-800 w-[20px] h-[20px] text-center mx-[5px]
+
+}
